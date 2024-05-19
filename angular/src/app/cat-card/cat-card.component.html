@@ -1,0 +1,11 @@
+<mat-card class="card-container">
+    <mat-card-content class="card-content">
+        @if (cat.url) { 
+            <img mat-card-image [src]="cat.url" alt="Photo of cat">
+        }
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
