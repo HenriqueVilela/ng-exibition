@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CatService } from './cat.service';
 import {MatCardModule} from '@angular/material/card';
+import { faker } from '@faker-js/faker';
+
 
 @Component({
   selector: 'app-cat-card',
@@ -15,6 +17,7 @@ export class CatCardComponent  {
   
   constructor(private catService: CatService) {
     this.cat = this.catService.getCat();
+    this.cat.name = faker.person.firstName();
   }
 
 }

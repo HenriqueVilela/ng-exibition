@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CatCardComponent } from '../cat-card/cat-card.component';
 
 
+
 @Component({
   selector: 'app-home',
   standalone: true,
