@@ -1,0 +1,22 @@
+@defer (on viewport) {
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; margin-bottom: 100px;">
+        @for (repeat of repeats; track repeat) {
+          <div style="display: block; width: 23%; height: 300px; margin: 10px;">
+            <app-random-roney></app-random-roney>
+          </div>
+        }
+    </div>
+    @defer (on viewport) {
+        <app-basic-table></app-basic-table>
+      } @loading (after 100ms; minimum 1s) {
+        <app-loader></app-loader>
+      } @placeholder {
+        <div>Placeholder</div>
+      }
+  </div>
+} @loading (after 100ms; minimum 1s) {
+  <app-loader></app-loader>
+} @placeholder {
+  <div>Placeholder</div>
+}

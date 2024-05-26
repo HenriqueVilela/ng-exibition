@@ -13,11 +13,11 @@ import { faker } from '@faker-js/faker';
 })
 export class CatCardComponent  {
 
-  public cat: any;
+  public cat = {name: 'gatinho', url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBIUQQoDDbIzMvwjkNAD5Rto_1q_Kc9r5XAuhgoDUSg&s"} as any;
   
   constructor(private catService: CatService) {
-    this.cat = this.catService.getCat();
-    this.cat.name = faker.person.firstName();
+    // this.cat = this.catService.getCat();
+    // this.cat.name = faker.person.firstName();
   }
 
 }
