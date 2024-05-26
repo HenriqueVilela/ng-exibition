@@ -1,9 +1,8 @@
-@defer (on viewport) {
   <div class="container">
-    <div style="display: flex; flex-wrap: wrap; margin-bottom: 100px;">
+    <div style="display: flex; flex-wrap: wrap; margin-bottom: 100px; justify-content: space-around;">
         @for (repeat of repeats; track repeat) {
-          <div style="display: block; width: 23%; height: 300px; margin: 10px;">
-            <app-random-roney></app-random-roney>
+          <div style="display: block; width: 400px; height: 300px; margin: 40px;">
+            <app-item></app-item>
           </div>
         }
     </div>
@@ -15,8 +14,3 @@
         <div>Placeholder</div>
       }
   </div>
-} @loading (after 100ms; minimum 1s) {
-  <app-loader></app-loader>
-} @placeholder {
-  <div>Placeholder</div>
-}

@@ -5,8 +5,8 @@ import { environment } from '../../environments/environment';
   selector: 'app-random-roney',
   standalone: true,
   template: `
-  <div style="width: 100%; height: 100%;">
-    <img height="100%" width="100%" [src]="roney" alt="roney mendes">
+  <div style="border-radius: inherit; width: 100%; height: 100%;">
+    <img style="border-radius: inherit;" height="100%" width="100%" [src]="roney" alt="roney mendes">
   </div>`
 })
 export class RandomRoneyComponent {
