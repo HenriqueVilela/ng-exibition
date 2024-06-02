@@ -1,0 +1,33 @@
+<div class="container">
+
+    <div style="display: flex; flex-wrap: wrap; margin-bottom: 100px; justify-content: space-around;">
+        @for (repeat of repeats; track repeat) {
+          <div style="display: block; width: 400px; height: 300px; margin: 40px;">
+            @defer (on hover) {
+            <app-item></app-item>
+            } @placeholder {
+                <div style="display: block; width: 100px; height: 100px; margin: 40px;">
+                    <img style="display: block; width: 100px; height: 100px;" src="https://static.todamateria.com.br/upload/po/nt/ponto-de-interrogacao-og.jpg?class=ogImageRectangle" alt="interrocagao">
+                </div>
+            }
+          </div>
+        }
+    </div>
+
+    <br><hr><br>
+
+    <button mat-raised-button type="button" #loadItens>Carregar mais</button>
+
+    <br><br>
+
+    @defer (on interaction(loadItens); prefetch on timer(5s)) {
+        <div style="display: flex; flex-wrap: wrap; margin-bottom: 100px; justify-content: space-around;">
+            @for (repeat of repeats; track repeat) {
+            <div style="display: block; width: 400px; height: 300px; margin: 40px;">
+                <app-item></app-item>
+            </div>
+            }
+        </div>
+    }
+
+</div>

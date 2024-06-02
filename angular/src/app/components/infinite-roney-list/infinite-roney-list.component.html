@@ -1,0 +1,13 @@
+<div class="container">
+    <div style="display: flex; flex-wrap: wrap; margin-bottom: 100px; justify-content: space-around;">
+        @for (repeat of repeats; track repeat) {
+          <div style="display: block; width: 400px; height: 300px; margin: 40px;">
+            @defer (on viewport) {
+            <app-item></app-item>
+            } @placeholder {
+              <app-loader></app-loader>
+            }
+          </div>
+        }
+    </div>
+</div>
