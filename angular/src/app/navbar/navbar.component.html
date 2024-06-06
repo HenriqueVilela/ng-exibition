@@ -1,4 +1,7 @@
 <div  class="navbar"> 
     <span class="title">Angular</span>
     <button mat-button  routerLink="/">Home</button>
+    @if(notifications().length > 0) {
+        <button (click)="openNotifications()" mat-button style="margin-left: auto; margin-right: 50px;" [matBadge]="notifications().length" matBadgeOverlap="false"> Notificações </button>
+    }
 </div>
